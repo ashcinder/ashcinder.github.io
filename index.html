@@ -68,7 +68,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"ashcinder.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":80,"cursorChar":"|","loop":true,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#5b8c85","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":false,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.svg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"ashcinder.github.io","root":"/","version":"1.9.9","typing":{"enable":false,"typeSpeed":80,"cursorChar":"|","loop":true,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#5b8c85","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":false,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.svg","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -84,17 +84,23 @@
 <meta name="generator" content="Hexo 8.1.2"></head>
 
 
-<body>
+<body class="page-home">
+  <a class="skip-link" href="#main-content">跳到正文</a>
+  <div id="reading-progress" aria-hidden="true"></div>
   
 
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 28vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <strong>Cinder&#39;s Notebook</strong>
+      <span class="brand-mark">C</span>
+      <span class="brand-copy">
+        <strong>Cinder&#39;s Notebook</strong>
+        <small>PERSONAL JOURNAL</small>
+      </span>
     </a>
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
@@ -171,6 +177,7 @@
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
               <i class="iconfont icon-search"></i>
+              <span class="nav-utility-label">搜索</span>
             </a>
           </li>
           
@@ -179,6 +186,7 @@
           <li class="nav-item" id="color-toggle-btn">
             <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
               <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+              <span class="nav-utility-label">主题</span>
             </a>
           </li>
         
@@ -295,21 +303,17 @@
 <div id="banner" class="banner" parallax=true
      style="background: url('/img/banner.svg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.35)">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.72)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="且听风吟，静待花开,记录那些值得被记住的时刻,在代码与文字之间寻找诗意"></span>
+            <span id="subtitle">且听风吟，静待花开,记录那些值得被记住的时刻,在代码与文字之间寻找诗意</span>
           
         </div>
 
         
       </div>
 
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
       
     </div>
   </div>
@@ -321,50 +325,60 @@
 
   </header>
 
-  <main>
+  <main id="main-content">
     
       <div class="container nopadding-x-md">
         <div id="board"
-          style="margin-top: 0">
+          >
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<h1 style="display: none">Cinder&#39;s Notebook</h1>
+<section class="home-intro" aria-labelledby="home-title">
+  <div class="home-intro__main">
+    <p class="home-kicker"><span></span> CINDER'S NOTEBOOK · SINCE 2026</p>
+    <h1 id="home-title">在代码与文字之间，<br><em>收藏生活的回声。</em></h1>
+    <p class="home-description">记录生活、技术与感悟的个人博客。这里没有标准答案，只有持续生长的笔记、故事和偶尔闪过的念头。</p>
+    <div class="home-actions">
+      <a class="primary-action" href="#latest-writing">开始阅读 <span>↘</span></a>
+      <button class="secondary-action js-open-search" type="button">
+        <i class="iconfont icon-search"></i> 搜索文章 <kbd>/</kbd>
+      </button>
+    </div>
+  </div>
+  <aside class="home-note" aria-label="博客概览">
+    <p class="home-note__label">CURRENTLY</p>
+    <p class="home-note__quote">且听风吟，<br>静待花开。</p>
+    <div class="home-stats">
+      <div><strong>3</strong><span>篇文章</span></div>
+      <div><strong>4</strong><span>个标签</span></div>
+    </div>
+  </aside>
+</section>
 
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" target="_self">
-          7月1日-炮打新葡京
-        </a>
-      </h2>
+<section class="writing-section" id="latest-writing">
+  <header class="section-heading">
+    <div>
+      <p>THE JOURNAL</p>
+      <h2>最近书写</h2>
+    </div>
+    <a href="/archives/">查看全部文章 <span>→</span></a>
+  </header>
 
+  <div class="post-list">
+    
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" target="_self">
-        <div>
-          5月29日，我们四人在澳门各赌场闲逛了一圈。途径大三巴牌坊附近炮时，四个人拍下了这张宝贵的合照，戏称为——炮打新葡京          今日偶然翻过，心里却已不是滋味。  照片里的四人，如今已各奔东西。虽称不上天南海北，却也是各自奔赴不同的前路，收拾衣裳独自启程。相见时难，别亦难，很难相信吾辈自认为的铁血洒脱之人，每每念及此处，也会在无人知晓的时刻暗暗哽咽。              如今重游旧寝
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-07-01 00:00" pubdate>
-              2026-07-01
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+      
+      <article class="index-card ">
+        <a class="post-number" href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" aria-hidden="true">01</a>
+        <div class="index-info">
+          <div class="post-card-meta">
+            <time datetime="2026-07-01 00:00">2026-07-01</time>
             
+              <span class="meta-dot"></span>
+              
 
 <span class="category-chains">
   
@@ -381,53 +395,38 @@
   
 </span>
 
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-              <a href="/tags/%E6%BE%B3%E9%97%A8/">#澳门</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" target="_self">
-          6月26日-深夜有感
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" target="_self">
-        <div>
-          又是一个深夜。窗外的世界早已沉睡，只有屏幕的光还亮着，像是黑夜里唯一的灯塔。  毕业后的这几天，时间仿佛变得黏稠起来。白天和黑夜的界限模糊了，日子不再是按课程表推进的节奏，而是变成了一片需要自己掌舵的海洋。有时候我会想，自由是不是另一种形式的迷失？  写代码的时候，世界是确定的——每一个 bug 都有原因，每一个功能都有实现路径。但生活不是这样。生活充满了没有标准答案的选择，每一步都像是在黑暗中摸
+          <h3 class="index-header">
+            <a href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" target="_self">7月1日-炮打新葡京</a>
+          </h3>
+          <a class="index-excerpt" href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" target="_self">
+            5月29日，我们四人在澳门各赌场闲逛了一圈。途径大三巴牌坊附近炮时，四个人拍下了这张宝贵的合照，戏称为——炮打新葡京          今日偶然翻过，心里却已不是滋味。  照片里的四人，如今已各奔东西。虽称不上天南海北，却也是各自奔赴不同的前路，收拾衣裳独自启程。相见时难，别亦难，很难相信吾辈自认为
+          </a>
+          <div class="post-card-footer">
+            <div class="post-tags">
+              
+                <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+              
+                <a href="/tags/%E6%BE%B3%E9%97%A8/">#澳门</a>
+              
+            </div>
+            <a class="read-more" href="/2026/07/01/2026_7.1_%E7%82%AE%E6%89%93%E6%96%B0%E8%91%A1%E4%BA%AC/" aria-label="阅读《7月1日-炮打新葡京》">阅读 <span>↗</span></a>
+          </div>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-26 01:32" pubdate>
-              2026-06-26
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+      </article>
+    
+      
+      
+      <article class="index-card ">
+        <a class="post-number" href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" aria-hidden="true">02</a>
+        <div class="index-info">
+          <div class="post-card-meta">
+            <time datetime="2026-06-26 01:32">2026-06-26</time>
             
+              <span class="meta-dot"></span>
+              
 
 <span class="category-chains">
   
@@ -444,53 +443,38 @@
   
 </span>
 
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
-            
-              <a href="/tags/%E6%B7%B1%E5%A4%9C/">#深夜</a>
             
           </div>
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" target="_self">
-          6月23日-毕业
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" target="_self">
-        <div>
-          倒计时终于临近，今日起，我也将脱下这身孔乙己的衣衫，成为世俗意义上的无业游民。倒不是身份多么卑微似的，之前的我和之后的我，无论是生理学构成，还是个人意识，都并无太大差异，无非是我，已经没有可以遮掩自我的、聊以慰藉的一层中间态身份罢了。  一些人脱离了16年的学生生涯，流入了资本市场，或多或多奔波；一些人延续着自己的求学之路，或自愿或非自愿地继续深造。而我，我的朋友，我什么状态都不是，又或者说什么都
+          <h3 class="index-header">
+            <a href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" target="_self">6月26日-深夜有感</a>
+          </h3>
+          <a class="index-excerpt" href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" target="_self">
+            又是一个深夜。窗外的世界早已沉睡，只有屏幕的光还亮着，像是黑夜里唯一的灯塔。  毕业后的这几天，时间仿佛变得黏稠起来。白天和黑夜的界限模糊了，日子不再是按课程表推进的节奏，而是变成了一片需要自己掌舵的海洋。有时候我会想，自由是不是另一种形式的迷失？  写代码的时候，世界是确定的——每一个 bug 都
+          </a>
+          <div class="post-card-footer">
+            <div class="post-tags">
+              
+                <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+              
+                <a href="/tags/%E6%B7%B1%E5%A4%9C/">#深夜</a>
+              
+            </div>
+            <a class="read-more" href="/2026/06/26/2026_6.26_%E6%B7%B1%E5%A4%9C%E6%9C%89%E6%84%9F/" aria-label="阅读《6月26日-深夜有感》">阅读 <span>↗</span></a>
+          </div>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-06-23 23:00" pubdate>
-              2026-06-23
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+      </article>
+    
+      
+      
+      <article class="index-card ">
+        <a class="post-number" href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" aria-hidden="true">03</a>
+        <div class="index-info">
+          <div class="post-card-meta">
+            <time datetime="2026-06-23 23:00">2026-06-23</time>
             
+              <span class="meta-dot"></span>
+              
 
 <span class="category-chains">
   
@@ -507,22 +491,30 @@
   
 </span>
 
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/%E6%AF%95%E4%B8%9A/">#毕业</a>
-            
-              <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
             
           </div>
+          <h3 class="index-header">
+            <a href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" target="_self">6月23日-毕业</a>
+          </h3>
+          <a class="index-excerpt" href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" target="_self">
+            倒计时终于临近，今日起，我也将脱下这身孔乙己的衣衫，成为世俗意义上的无业游民。倒不是身份多么卑微似的，之前的我和之后的我，无论是生理学构成，还是个人意识，都并无太大差异，无非是我，已经没有可以遮掩自我的、聊以慰藉的一层中间态身份罢了。  一些人脱离了16年的学生生涯，流入了资本市场，或多或多奔波；一
+          </a>
+          <div class="post-card-footer">
+            <div class="post-tags">
+              
+                <a href="/tags/%E6%AF%95%E4%B8%9A/">#毕业</a>
+              
+                <a href="/tags/%E9%9A%8F%E7%AC%94/">#随笔</a>
+              
+            </div>
+            <a class="read-more" href="/2026/06/23/2026_6.23_%E6%AF%95%E4%B8%9A/" aria-label="阅读《6月23日-毕业》">阅读 <span>↗</span></a>
+          </div>
+        </div>
         
-      </div>
-    </article>
+      </article>
+    
   </div>
-
+</section>
 
 
 
@@ -569,6 +561,14 @@
 
   <footer>
     <div class="footer-inner">
+  <div class="footer-signature">
+    <a href="/" class="footer-mark">C</a>
+    <div>
+      <strong>Cinder&#39;s Notebook</strong>
+      <p>记录那些值得被记住的时刻。</p>
+    </div>
+    <a class="footer-backtop" href="#" aria-label="返回顶部">回到顶部 ↑</a>
+  </div>
   
     <div class="footer-content">
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <span> · </span> <span>&copy; 2026 Cinder</span> 
@@ -599,23 +599,6 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        var texts = ["且听风吟，静待花开","记录那些值得被记住的时刻","在代码与文字之间寻找诗意"];
-        var idx = Math.floor(Math.random() * texts.length);
-        typing(texts[idx]);
-      
-    })(window, document);
-  </script>
 
 
 
