@@ -153,7 +153,7 @@
   });
 
   // A restrained entrance animation for post rows.
-  var cards = document.querySelectorAll('.index-card');
+  var cards = document.querySelectorAll('.index-card, .feed-card');
   if (cards.length && !reduceMotion && 'IntersectionObserver' in window) {
     cards.forEach(function (card) {
       card.style.opacity = '0';
