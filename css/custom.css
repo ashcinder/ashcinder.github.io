@@ -1321,6 +1321,40 @@ html[data-user-color-scheme="dark"] .page-home {
   border-radius: 2px;
 }
 
+#comments {
+  position: relative;
+  margin-top: 50px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+}
+
+#comments::before {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--ink);
+  content: "评论与交流";
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 600;
+}
+
+#comments::after {
+  display: block;
+  margin-top: 10px;
+  color: var(--muted);
+  content: "评论由 GitHub Issues 提供支持，请使用 GitHub 账号登录后留言。";
+  font-size: 11px;
+  text-align: center;
+}
+
+#comments .utterances {
+  max-width: 100%;
+}
+
+#comments iframe {
+  color-scheme: light dark;
+}
+
 #toc {
   color: var(--ink-soft);
 }
