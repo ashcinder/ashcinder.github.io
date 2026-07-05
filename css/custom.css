@@ -1332,7 +1332,7 @@ html[data-user-color-scheme="dark"] .page-home {
   display: block;
   margin-bottom: 18px;
   color: var(--ink);
-  content: "评论与交流";
+  content: "我太孤独了，请和我说说话吧";
   font-family: var(--serif);
   font-size: 25px;
   font-weight: 600;
@@ -1342,17 +1342,97 @@ html[data-user-color-scheme="dark"] .page-home {
   display: block;
   margin-top: 10px;
   color: var(--muted);
-  content: "评论由 GitHub Issues 提供支持，请使用 GitHub 账号登录后留言。";
+  content: "可以匿名留下昵称和想说的话。请温柔一点，也请真实一点。";
   font-size: 11px;
   text-align: center;
 }
 
-#comments .utterances {
+#comments .utterances,
+#comments #waline {
   max-width: 100%;
 }
 
 #comments iframe {
   color-scheme: light dark;
+}
+
+#waline {
+  --waline-theme-color: var(--accent);
+  --waline-active-color: var(--accent-dark);
+  --waline-color: var(--ink-soft);
+  --waline-bg-color: var(--surface);
+  --waline-bg-color-light: var(--paper-deep);
+  --waline-bg-color-hover: var(--paper-deep);
+  --waline-border-color: var(--line);
+  --waline-disable-bg-color: var(--paper-deep);
+  --waline-disable-color: var(--muted);
+  --waline-code-bg-color: var(--paper-deep);
+  --waline-bq-color: var(--sage);
+  --waline-info-bg-color: var(--paper-deep);
+  --waline-info-color: var(--muted);
+  --waline-box-shadow: none;
+  --waline-avatar-radius: 50%;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+}
+
+#waline .wl-panel {
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 12px 38px rgba(32, 32, 30, 0.06);
+}
+
+#waline .wl-header {
+  padding: 0 14px;
+  background: var(--paper-deep);
+  border-bottom: 1px solid var(--line);
+}
+
+#waline .wl-header-item {
+  color: var(--ink-soft);
+}
+
+#waline .wl-header input {
+  color: var(--ink);
+}
+
+#waline .wl-editor {
+  min-height: 145px;
+  padding: 18px;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+#waline .wl-editor::placeholder {
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+#waline .wl-footer {
+  padding: 10px 14px 14px;
+}
+
+#waline .wl-btn {
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+#waline .wl-btn.primary {
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
+}
+
+#waline .wl-btn.primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
 }
 
 #toc {
